@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 local Window = Rayfield:CreateWindow({
     name = "Grow Anything Selector",
     subtitle = "Choose which version to run",
-    theme = "cobalt",
-    sidebarLayout = false, -- better for mobile
+    theme = "rose",
+    sidebarLayout = false,
     showName = "GA Selector",
 })
 
@@ -18,7 +18,7 @@ Tab:CreateText({
 
 Tab:CreateSection({ name = "📜 Scripts" })
 
--- Old Script Button
+
 Tab:CreateButton({
     name = "▶ Run OLD Script",
     callback = function()
@@ -33,7 +33,6 @@ Tab:CreateButton({
     end
 })
 
--- Rework Script Button
 Tab:CreateButton({
     name = "▶ Run REWORK Script (Gen2)",
     callback = function()

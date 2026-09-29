@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
     showName = "GA Version Selector",
 })
 
-local Tab = Window:CreateTab({ name = "Select Version", icon = "" })
+local Tab = Window:CreateTab({ name = "Select Version", })
 
 Tab:CreateSection({ name = "🌱 Choose Version" })
 
@@ -18,19 +18,6 @@ Tab:CreateText({
 
 Tab:CreateSection({ name = "📜 Scripts" })
 
-Tab:CreateButton({
-    name = "▶ Run OLD Script",
-    callback = function()
-        Window:Notify({
-            title = "Loading...",
-            content = "Starting Old Grow Anything script",
-            duration = 3
-        })
-        task.wait(0.5)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/refs/heads/main/Grow%20Anything.lua"))()
-        Window:Unload()
-    end
-})
 
 Tab:CreateButton({
     name = "▶ Run REWORK Script",
@@ -41,10 +28,25 @@ Tab:CreateButton({
             duration = 3
         })
         task.wait(0.5)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/refs/heads/main/Grow%20Anything-Rework.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/main/GA-Rework.lua"))()
         Window:Unload()
     end
 })
+
+Tab:CreateButton({
+    name = "▶ Run OLD Script",
+    callback = function()
+        Window:Notify({
+            title = "Loading...",
+            content = "Starting Old Grow Anything script",
+            duration = 3
+        })
+        task.wait(0.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/main/Grow%20Anything.lua"))()
+        Window:Unload()
+    end
+})
+
 
 
 Tab:CreateSection({ name = "ℹ️ Info" })

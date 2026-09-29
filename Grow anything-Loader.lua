@@ -19,20 +19,6 @@ Tab:CreateText({
 Tab:CreateSection({ name = "📜 Scripts" })
 
 Tab:CreateButton({
-    name = "▶ Run REWORK Script",
-    callback = function()
-        Window:Notify({
-            title = "Loading...",
-            content = "Starting Reworked Grow Anything script",
-            duration = 3
-        })
-        task.wait(0.5)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/refs/heads/main/Grow%20Anything-Rework.lua"))()
-        Window:Unload()
-    end
-})
-
-Tab:CreateButton({
     name = "▶ Run OLD Script",
     callback = function()
         Window:Notify({
@@ -46,6 +32,19 @@ Tab:CreateButton({
     end
 })
 
+Tab:CreateButton({
+    name = "▶ Run REWORK Script",
+    callback = function()
+        Window:Notify({
+            title = "Loading...",
+            content = "Starting Reworked Grow Anything script",
+            duration = 3
+        })
+        task.wait(0.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/refs/heads/main/Grow%20Anything-Rework.lua"))()
+        Window:Unload()
+    end
+})
 
 
 Tab:CreateSection({ name = "ℹ️ Info" })

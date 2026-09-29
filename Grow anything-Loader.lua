@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
     showName = "GA Version Selector",
 })
 
-local Tab = Window:CreateTab({ name = "Select Script", icon = "play" })
+local Tab = Window:CreateTab({ name = "Select Version", icon = "" })
 
 Tab:CreateSection({ name = "🌱 Choose Version" })
 
@@ -18,7 +18,7 @@ Tab:CreateText({
 
 Tab:CreateSection({ name = "📜 Scripts" })
 Tab:CreateButton({
-    name = "▶ Run REWORK Script (Recommended!)",
+    name = "▶ Run REWORK Script (Recommended)",
     callback = function()
         Window:Notify({
             title = "Loading...",

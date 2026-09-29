@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
     subtitle = "Choose which version to run",
     theme = "rose",
     sidebarLayout = false,
-    showName = "GA Selector",
+    showName = "GA Version Selector",
 })
 
 local Tab = Window:CreateTab({ name = "Select Script", icon = "play" })
@@ -17,7 +17,19 @@ Tab:CreateText({
 })
 
 Tab:CreateSection({ name = "📜 Scripts" })
-
+Tab:CreateButton({
+    name = "▶ Run REWORK Script (Recommended!)",
+    callback = function()
+        Window:Notify({
+            title = "Loading...",
+            content = "Starting Reworked Grow Anything script",
+            duration = 3
+        })
+        task.wait(0.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/refs/heads/main/Grow%20Anything-Rework.lua"))()
+        Window:Unload()
+    end
+})
 
 Tab:CreateButton({
     name = "▶ Run OLD Script",
@@ -33,19 +45,7 @@ Tab:CreateButton({
     end
 })
 
-Tab:CreateButton({
-    name = "▶ Run REWORK Script (Gen2)",
-    callback = function()
-        Window:Notify({
-            title = "Loading...",
-            content = "Starting Reworked Grow Anything script",
-            duration = 3
-        })
-        task.wait(0.5)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/refs/heads/main/Grow%20Anything-Rework.lua"))()
-        Window:Unload()
-    end
-})
+
 
 Tab:CreateSection({ name = "ℹ️ Info" })
 

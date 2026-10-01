@@ -34,6 +34,20 @@ Tab:CreateButton({
 })
 
 Tab:CreateButton({
+    name = "▶ Run Thai Script🇹🇭",
+    callback = function()
+        Window:Notify({
+            title = "Loading...",
+            content = "Starting Thai Language Grow Anything script",
+            duration = 3
+        })
+        task.wait(0.5)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/main/GA-THAI.lua"))()
+        Window:Unload()
+    end
+})
+
+Tab:CreateButton({
     name = "▶ Run OLD Script",
     callback = function()
         Window:Notify({
@@ -46,7 +60,6 @@ Tab:CreateButton({
         Window:Unload()
     end
 })
-
 
 
 Tab:CreateSection({ name = "ℹ️ Info" })

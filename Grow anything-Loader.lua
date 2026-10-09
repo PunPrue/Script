@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 local Window = Rayfield:CreateWindow({
     name = "Grow Anything Selector",
     subtitle = "Choose which version to run",
-    theme = "rose",
+    theme = "cobalt",
     sidebarLayout = false,
     showName = "GA Version Selector",
 })
@@ -46,21 +46,6 @@ Tab:CreateButton({
         Window:Unload()
     end
 })
-
-Tab:CreateButton({
-    name = "▶ Run OLD Script",
-    callback = function()
-        Window:Notify({
-            title = "Loading...",
-            content = "Starting Old Grow Anything script",
-            duration = 3
-        })
-        task.wait(0.5)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PunPrue/Script/main/Grow%20Anything.lua"))()
-        Window:Unload()
-    end
-})
-
 
 Tab:CreateSection({ name = "ℹ️ Info" })
 
